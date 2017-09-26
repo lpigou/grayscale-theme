@@ -1,29 +1,47 @@
 # Site settings
-title: Grayscale
+title: Huisartsenpraktijk <br> Sint-Amandsberg
 email: your-email@domain.com
 url: https://example.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "Huisartsenpraktijk in Sint-Amandsberg, Gent"
+
+docter1:
+  name: "Frédéric"
+  family-name: "Goetghebuer"
+docter2:
+  name: "Evy"
+  family-name: "Luyten"
+
+teltext: "09/228.47.45"
+tel: "+3292284745" # zonder leestekens
+
+straat: "Land van Waaslaan 80"
+gemeente: "9040 Sint-Amandsberg"
+
+home-photo: "docter.jpeg"
+
+photo-tint1: rgba(0,25,0,0.7)
+photo-tint2: rgba(0,25,50, 0.7)
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary-dark: '#000000'
-  links: '#219ab3'
+  links: '#fb0' #'#219ab3'
 
 # Footer settings
 footer: Your Website
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
+# social:
+#   - title: twitter
+#     url: https://twitter.com/SBootstrap
+#   - title: facebook
+#     url:
+#   - title: stack-overflow
+#     url: http://stackoverflow.com/questions/tagged/jekyll
+#   - title: bitbucket
+#     url: http://bitbucket.org/jekyll
+#   - title: github
+#     url: https://github.com/IronSummitMedia/startbootstrap
 
 # Build settings
 markdown: kramdown

@@ -8,8 +8,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #fff;
-    background-color: {{ site.color.primary-dark }};
+    color: #222;
+    background-color: {{ site.color.primary-light }};
 }
 
 html {
@@ -27,6 +27,7 @@ h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    text-align: center;
     letter-spacing: 1px;
 }
 
@@ -36,13 +37,32 @@ p {
     line-height: 1.5;
 }
 
+.par {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+ul{
+    font-size: 18px;
+    padding-left: 20px;
+}
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
         font-size: 20px;
         line-height: 1.6;
     }
-}
+    .par {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    ul{
+        font-size: 20px;
+        padding-left: 20px;
+    }
 
 a {
     color: {{ site.color.links }};
@@ -59,6 +79,10 @@ a:focus {
 
 .light {
     font-weight: 400;
+}
+
+.news{
+    text-align: left;
 }
 
 .navbar-custom {
@@ -138,7 +162,11 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(/img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: linear-gradient(
+      {{ site.photo-tint1 }}, 
+      {{ site.photo-tint2 }}
+    ),
+    url({{ site.baseurl }}/img/{{site.home-photo}}) no-repeat bottom center scroll;
     background-color: {{ site.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -152,11 +180,22 @@ a:focus {
 }
 
 .intro .intro-body .brand-heading {
+    text-transform: none;
     font-size: 40px;
 }
 
-.intro .intro-body .intro-text {
+.intro .intro-body .intro-textl{
     font-size: 18px;
+}
+
+.intro-tel{
+    font-size: 18px;
+    margin: -25px 0 25px 0;
+}
+
+.intro-tel a{
+    color: #fb0;
+    font-weight: 600;
 }
 
 @media(min-width:767px) {
@@ -166,11 +205,15 @@ a:focus {
     }
 
     .intro .intro-body .brand-heading {
-        font-size: 100px;
+        font-size: 62px;
     }
 
     .intro .intro-body .intro-text {
         font-size: 25px;
+    }
+
+    .intro-tel{
+        font-size: 23px;
     }
 }
 
@@ -255,9 +298,14 @@ a:focus {
 .download-section {
     width: 100%;
     padding: 50px 0;
+    margin-top: -50px;
     color: #fff;
-    background: url(/img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: {{ site.color.primary-dark }};
+    background: linear-gradient(
+      {{ site.photo-tint1 }}, 
+      {{ site.photo-tint2 }}
+    ), 
+    url({{ site.baseurl }}/img/{{site.home-photo}}) no-repeat center center scroll;
+    /*background-color: #333;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -267,7 +315,8 @@ a:focus {
 #map {
     width: 100%;
     height: 200px;
-    margin-top: 100px;
+    /*left: 0vh;*/
+    /*margin-top: 100px;*/
 }
 
 @media(min-width:767px) {
@@ -276,12 +325,13 @@ a:focus {
     }
 
     .download-section {
+        margin-top: -100px;
         padding: 100px 0;
     }
 
     #map {
         height: 400px;
-        margin-top: 250px;
+        /*margin-top: 250px;*/
     }
 }
 

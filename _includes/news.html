@@ -1,0 +1,12 @@
+    <!-- About Section -->
+    <section id="news" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Nieuws</h2>
+                {% for post in site.posts %}
+                  	<p class="news"> <b>{{ post.title }}</b>: {{ post.excerpt | remove: '<p>' | remove: '</p>'}} </p>
+                  	<div style="text-align: right; margin: -35px 20px 30px 0px;">{{ post.datum }}</div>
+              	{% endfor %}
+            </div>
+        </div>
+    </section>
